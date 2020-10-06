@@ -16,6 +16,7 @@ class CrimeModel:
         # self.get_station(crime)
         crime_police = self.get_crime_police()
         print(f'{crime_police.head()}')
+        print(f'(crime_police.colums)')
 
     def get_crime(self):
         reader = self.reader
