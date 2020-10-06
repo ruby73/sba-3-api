@@ -1,3 +1,4 @@
+"""
 OOP 에서
 
 class , instance
@@ -64,3 +65,4 @@ URL = URI/search=hyper
 controller 에 REST 설정한 부분까지가 2주차 MVC 의 종료입니다.
 
 3주차 Model 로 학습전환 합니다. 
+"""
