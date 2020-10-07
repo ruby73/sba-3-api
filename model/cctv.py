@@ -91,3 +91,4 @@ class CctvModel:
 if __name__ == '__main__':
     model = CctvModel()
     model.hook_process();
+    

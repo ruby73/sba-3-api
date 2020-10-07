@@ -81,6 +81,8 @@ class Police:
         police_norm.to_csv(reader.new_file(), sep=',', encoding='UTF-8')
 
 
+
+
 if __name__ == '__main__':
     police = Police()
-    police.hook_process()
+    

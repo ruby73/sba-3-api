@@ -6,17 +6,17 @@ from util.file_helper import FileReader
 
 class CrimeModel:
     def __init__(self):
-        print(f'baseurl ### {baseurl}')
+        print(f'baseurl #### {baseurl}')
         self.reader = FileReader()
 
     def hook_process(self):
         print('----------- CRIME & POLICE ----------')
         crime = self.get_crime()
-        print(f'{crime.head()}')
         # self.get_station(crime)
         crime_police = self.get_crime_police()
         print(f'{crime_police.head()}')
-        print(f'(crime_police.colums)')
+        print(f'{crime_police.columns}')
+
 
     def get_crime(self):
         reader = self.reader
@@ -75,7 +75,11 @@ class CrimeModel:
 
 
 
+
+    
+
+
 if __name__ == '__main__':
     crime = CrimeModel()
-    # crime.get_crime()
     crime.hook_process()
+    
