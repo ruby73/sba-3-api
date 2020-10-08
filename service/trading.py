@@ -1,6 +1,15 @@
+import os
+import sys
+
+from tqdm.cli import main
+sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
+baseurl = os.path.dirname(os.path.abspath(__file__))
 import math
 import pandas_datareader as data_reader
 import numpy as np
+from tqdm import tqdm
+from model.ai_trader import AiTrader
+
 # pip install pandas-datareader
 class Trading:
 
@@ -41,7 +50,7 @@ class Trading:
         episodes = 1000
         batch_size = 32
         data_samples = len(data) - 1
-        trader = AI_Trader(window_size)
+        trader = AiTrader(window_size)
         print('==== Model Summary ===')
         print(trader.model.summary())
         for episode in range(1, episodes + 1):
@@ -76,3 +85,8 @@ class Trading:
                     trader.batch_train(batch_size)
             if episode % 10 == 0:
                 trader.model.save('ai_trader_{}.h5'.format(episode))
+
+if __name__ == '__main__':
+    trading = Trading()
+    trading.transaction('AAPL')
+    
