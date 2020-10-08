@@ -1,5 +1,5 @@
 from flask import Flask
-from flask_restful import Resource, Api 
+from flask_restful import Resource, Api
 
 app = Flask(__name__) #데코레이터 만드는 문법 
 api = Api(app) #api 인스턴스, Api 클래스, () 생성자
