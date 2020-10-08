@@ -4,12 +4,14 @@ sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 baseurl = os.path.dirname(os.path.abspath(__file__))
 import numpy as np
 import tensorflow as tf 
+import util.version_checker
 import tensorflow_datasets as tfds
+import tensorflow_hub as hub
 # pip install tensorflow-datasets
 # conda install -c anaconda tensorflow-datasets
-import util.version_checker
+
 class Imdb:
-    
+
     train_data : object = None
     validation_data : object = None
     test_data : object = None
